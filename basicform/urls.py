@@ -16,11 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from forms import views
-import include
 
-urlpatterns += [
+
+urlpatterns = [
     url(r'^$',views.index, name='index'),
     url(r'^forms/',views.basic_forms_view, name='forms'),
     url(r'^admin/', admin.site.urls),
-    url(r'^captcha/', include('captcha.urls')),
+    
 ]
