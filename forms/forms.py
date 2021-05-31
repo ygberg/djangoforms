@@ -10,3 +10,10 @@ class Basic_forms(forms.Form):
 class Notbot(forms.Form):
     first_name = forms.CharField(label=(''), max_length=255)
     email = forms.EmailField()
+
+class Users_form(forms.Form):
+    first_name = forms.CharField(max_length=255)
+    last_name = forms.CharField(max_length=255)
+    email = forms.EmailField(max_length=255)
+    username = forms.CharField(max_length=255)
+    password = forms.CharField(max_length=255,widget=forms.PasswordInput)

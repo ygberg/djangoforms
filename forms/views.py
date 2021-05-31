@@ -30,3 +30,4 @@ def basic_forms_view(request):
     firm = Notbot()
 
     return render(request,'basic_forms.html',{'form':form,'firm':firm})
+
